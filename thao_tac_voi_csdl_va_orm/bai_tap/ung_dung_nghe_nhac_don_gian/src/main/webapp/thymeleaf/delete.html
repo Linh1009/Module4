@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+<p>
+    <a th:href="@{/nhac}">Back to music list</a>
+</p>
+<div id="form">
+    <form action="#" th:action="@{/nhac/delete}" th:object="${nhac}" method="post" >
+        <div>
+            <lable>Tên bài hát</lable>
+            <input type="text" th:field="*{ten}"/>
+        </div>
+        <div>
+            <lable>Nghệ sĩ</lable>
+            <input type="text" th:field="*{ngheSi}"/>
+        </div>
+        <div>
+            <lable>Thể loại</lable>
+            <input type="text" th:field="*{theLoai}"/>
+        </div>
+        <div>
+            <lable>File nhac</lable>
+            <input type="file" th:field="*{file}"/>
+        </div>
+        <input type="submit" value="delete"/>
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>abc</title>
+</head>
+<body>
+<h3>Add Music</h3>
+<p>
+    <a th:href="@{/list}">
+        Back to music list
+    </a>
+</p>
+<div id="form">
+    <form>
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name</label>
+            <input type="text" th:field="*{name}"/>
+        </div>
+        <div>
+            <label>Description</label>
+            <input type="text" th:field="*{description}"/>
+        </div>
+        <div>
+            <label>Image</label>
+            <input type="file" th:field="*{image}"/>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+<!--<form >-->
+<!--    <div>-->
+<!--        <label>Tên bài hát</label>-->
+<!--        <input type="text" th:field="*{ten}"/>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label>Nghệ sĩ</label>-->
+<!--        <input type="text" th:field="*{ngheSi}"/>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label>Thể loại</label>-->
+<!--        <input type="text" th:field="*{theLoai}"/>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label>File nhạc</label>-->
+<!--        <input type="file" th:field="*{file}"/>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <input type="submit" value="Submit"/>-->
+
+<!--</form>-->
+</body>
+</html>

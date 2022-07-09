@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Ten bai hat</th>
+        <th>Nghe si the hien</th>
+        <th>The loai nhac</th>
+        <th>File bai hat</th>
+        <th>Update</th>
+        <th>Delete</th>
+
+    </tr>
+    <tbody th:each="nh, iterStat: ${nhacList}">
+    <tr th:object="${nh}">
+        <td th:text="*{ten}"></td>
+        <td th:text="*{ngheSi}"></td>
+        <td th:text="*{theLoai}"></td>
+        <td th:text="*{file}"></td>
+        <td><a th:href="@{/nhac/{ten}/update(ten=${nhac.ten})}">update</a></td>
+        <td><a th:href="@{/nhac/{ten}/delete(ten=${nhac.ten})}">delete</a></td>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>
