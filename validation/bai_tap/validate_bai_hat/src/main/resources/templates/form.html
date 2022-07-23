@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Subscription Form </h2>
+
+<form th:action="@{/validate}" th:object="${music}" method="post">
+    <table>
+        <tr>
+            <td>Tên bài hát</td>
+            <td><input type="text" th:field="*{ten}"></td>
+            <td th:if="${#fields.hasErrors('ten')}" th:errors="*{ten}">Name Error</td>
+        </tr>
+        <tr>
+            <td>Nghệ sĩ:</td>
+            <td><input type="text" th:field="*{ngheSi}"></td>
+            <td th:if="${#fields.hasErrors('ngheSi')}" th:errors="*{ngheSi}">Name Error</td>
+        </tr>
+        <tr>
+            <td>Thể loại:</td>
+            <td><input type="text" th:field="*{theLoai}"></td>
+            <td th:if="${#fields.hasErrors('theLoai')}" th:errors="*{theLoai}">phoneNum Error</td>
+        </tr>
+    </table>
+    <input type="submit" value="SUBMIT">
+</form>
+</body>
+</html>
