@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="form">
+    <div>
+        <lable>Total product:</lable>
+        <lable th:text="${cart.countProductQuantity()}"></lable>
+    </div>
+    <div>
+        <lable>Name:</lable>
+        <lable th:text="${product.name}"></lable>
+    </div>
+    <div>
+        <lable>Price:</lable>
+        <lable th:text="${product.price}"></lable>
+    </div>
+    <div>
+        <lable>Description</lable>
+        <lable th:text="${product.description}"></lable>
+    </div>
+</div>
+
+<!--
+<h3>Total Products: <span th:text="${cart.countProductQuantity()}"></span></h3>
+-->
+</body>
+</html>
